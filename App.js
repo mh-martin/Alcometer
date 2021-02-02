@@ -3,6 +3,8 @@ import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
 import RadioForm from 'react-native-simple-radio-button';
 
+// Tested with android
+
 export default function App() {
   const [weight, setWeight] = useState('0');
   const [bottles, setBottles] = useState(1);
@@ -15,7 +17,7 @@ export default function App() {
     let grams = litres * 8 * 4.5;
     let result;
 
-    grams = grams - (weight / 10) * time
+    grams = grams - weight / 10 * time
 
     if (gender === 'male') {
       result = grams / (weight * 0.7)
@@ -26,7 +28,8 @@ export default function App() {
     if (result < 0) {
       result = 0;
     }
-    setPromilles(result)
+    
+    setPromilles(result);
 
   }
 
