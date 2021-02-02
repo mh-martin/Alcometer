@@ -9,8 +9,6 @@ export default function App() {
   const [time, setTime] = useState(1);
   const [gender, setGender] = useState('male');
   const [promilles, setPromilles] = useState(0);
-  // const [bottlesVisible, setBottlesVisible] = useState(false);
-  // const [timeVisible, setTimeVisible] = useState(false);
 
   function calculate() {
     let litres = bottles * 0.33;
@@ -50,12 +48,6 @@ export default function App() {
           containerStyle={{ height: 40 }}
           defaultValue={bottles}
           labelStyle={{ color: 'black' }}
-          // isVisible={bottlesVisible}
-          // onOpen={() => {
-          //   setBottlesVisible(true)
-          //   setTimeVisible(false)
-          // }}
-          // onClose={() => setBottlesVisible(false)}
           onChangeItem={item => setBottles(item.value)}>
         </DropDownPicker>
       </View>
@@ -71,12 +63,6 @@ export default function App() {
           containerStyle={{ height: 40 }}
           defaultValue={time}
           labelStyle={{ color: 'black' }}
-          // isVisible={timeVisible}
-          // onOpen={() => {
-          //   setTimeVisible(true)
-          //   setBottlesVisible(false)
-          // }}
-          // onClose={() => setTimeVisible(false)}
           onChangeItem={item => setTime(item.value)}>
         </DropDownPicker>
       </View>
